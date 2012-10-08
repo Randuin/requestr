@@ -1,0 +1,11 @@
+- unless @requests.empty?
+  ul
+    - @requests.each do |request|
+      li
+        .verb = request['verb']
+        .request == request['params'].ai(:html => true)
+        .time = request['time']
+- else
+  p
+    | No requests found.  Please make some.
+      Thank you!
